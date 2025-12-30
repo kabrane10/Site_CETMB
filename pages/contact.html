@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | CETMB Kara</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+
+img{
+    max-width: 100%;
+
+}   
+.slider-container{
+    margin: 20px auto;
+   max-width: 800px;
+   position: relative;
+   height: 350px;
+   overflow: hidden;
+}     
+.menus{
+    position: absolute;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+
+}
+.menus label{
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background: #ccc;
+    margin: 0 0.2em 1em;
+
+}
+.menus label:hover, .menus label:focus{
+    background: #1c87c9;
+}
+.slide-input{
+    opacity: 0;
+
+}
+.slide-img{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition: left 0s 0.75s;
+}
+[id^="slide"]:checked + .slide-img{
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="../assets/images/logo.jpeg" alt="Logo CETMB">
+          <h1>CET Mgr <br>
+            Bakpessi</h1>
+        </div>
+      
+        <nav class="nav-menu active" id="navMenu">
+          <ul class="menu">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="#Apropos">À propos</a></li>
+            <li><a href="./orientation.html">Orientation</a></li> 
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Nos Filières ▼</a>
+              <ul class="dropdown-menu">
+                <li><a href="./serie_F.html">Série F – Techniques Industrielles</a></li>
+                <li><a href="./serie_G.html">Série G – Techniques Administratives</a></li>
+              </ul>
+            </li>
+      
+            <li><a href="./galerie.html">Notre Galerie</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+          <button class="menu_hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+            <img src="../assets/images/imgi_2_menu_humburger.png" alt="Icône du menu" class="menu_hamburger">
+        </button>
+
+        
+    </header>
+    <div class="slider-container">
+        <div class="menus">
+            <label for="slide-dot-1"></label>
+            <label for="slide-dot-2"></label>
+            <label for="slide-dot-3"></label>
+            <label for="slide-dot-4"></label>
+            <label for="slide-dot-5"></label>
+            <label for="slide-dot-6"></label>
+        </div>
+        <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
+        <img class="slide-img" src="../assets/images/batiment.jpg" alt="">
+
+        <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
+        <img class="slide-img" src="../assets/images/image-6.jpg" alt="">
+
+        <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
+        <img class="slide-img" src="../assets/images/image-0.jpg" alt="">
+        
+        <input class="slide-input" id="slide-dot-4" type="radio" name="slides">
+        <img class="slide-img" src="../assets/images/image-4.jpg" alt="">
+
+        <input class="slide-input" id="slide-dot-5" type="radio" name="slides">
+        <img class="slide-img" src="../assets/images/image2.jpg" alt="">
+         
+        <input class="slide-input" id="slide-dot-6" type="radio" name="slides">
+        <img class="slide-img" src="../assets/images/image-5.jpg" alt="">
+
+
+
+
+        
+    </div>
+<section class="contact-hero">
+    <h2>Contactez-nous</h2>
+    <p>Nous sommes à votre écoute pour toute information ou inscription</p>
+</section>
+
+<section class="contact-container">
+
+    <!-- INFOS CONTACT -->
+    <div class="contact-info">
+        <h3>Nos coordonnées</h3>
+
+        <p><strong>Adresse :</strong><br>
+            Kara – Commune Kozah 1<br>
+            Quartier Chaminade, près du dépôt de boissons SODIBO
+        </p>
+        <p><strong>Téléphone :</strong> +228 90 34 80 81</p>
+
+        <p><strong>Boîte Postale :</strong> BP 484 – Kara</p>
+
+        <p><strong>Statut :</strong> Collège Laïc agréé par l’État</p>
+
+        <p><strong>N° d’agrément :</strong><br>
+            2022/013/MEPSTA/META/CAB/SE-CCCS
+        </p>
+
+        <p><strong>Devise :</strong><br>
+            Savoir – Savoir-faire – Savoir-être
+        </p>
+    </div>
+
+    <!-- FORMULAIRE -->
+    <div class="contact-form">
+        <h3>✉️ Envoyez-nous un message</h3>
+
+        <form method="POST" action="contact_traitement.php">
+            <input type="text" name="nom" placeholder="Votre nom complet" required>
+
+            <input type="email" name="email" placeholder="Votre email" required>
+
+            <input type="text" name="objet" placeholder="Objet du message" required>
+
+            <textarea name="message" placeholder="Votre message..." required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container_footer">
+        <div class="fin">
+            <h4 style="color: #ffffff;">Collège d'Enseignement Technique Mgr Bakpessi <strong>CETMB</strong></h4>
+            <p>Quartier Chaminade, près du dépôt de boissons Sodibo, Kara, BP : 484,  Du côté sud juste derrière, 
+            l'Ancienne pharmacie Kara-Centre</p>
+            <p>Téléphone : +228 90 34 80 81</p>
+        </div>
+        <div class="fin d_liens">
+            <h3>Liens utiles</h3>
+            <ul>
+                <li><a href='/'>Accueil</a></li>
+                <li><a href='/formations_final'>Nos Filières</a></li>
+                <li><a href='/contact_final'>Contact</a></li>
+                
+            </ul>
+        </div>
+        <div class="fin d_lien">
+            <h3>Suivez-nous</h3>
+            <div class="reseaux">
+                
+                <a href="https://www.facebook.com/share/16Ac6cT6Aw/ "><i class="bx bxl-facebook"></i></a>
+            <a href="https://vm.tiktok.com/ZMSBpNXnn/ "><i class="bx bxl-tiktok"></i></a>
+            
+            </div>
+        </div>
+       
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; Collège  d'Ensignement  Technique  Monseigneur  Bakpessi  2025 | Tous Droits Reservés.</p>
+    </div>
+</footer>
+
+
+<a href="#top" id="up">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M7 14l5-5 5 5z"/>
+    </svg>
+</a>
+
+<script src="../function.js"></script>
+
+</body>
+</html>

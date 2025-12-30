@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Orientation Scolaire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  margin: 20px 15px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.hero-image,.hero-text {
+   width: 50%;
+   
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  padding: 40px;
+  text-align: left;
+  box-shadow: 10px #02aa02;
+}
+
+.hero-text h2 {
+  color: #263575;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* CONTENU */
+.contenu {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contenu h3 {
+  color: #263575;
+  margin-bottom: 30px;
+}
+
+.contenu p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.contenu .important {
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.contenu .highlight {
+  color: #c00;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: #02aa02;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #900;
+}
+
+/* IMAGE BAS */
+.image-bas {
+  margin-top: 60px;
+}
+
+.image-bas img {
+  width: 100%;
+  height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-image,
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text {
+    padding: 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="../assets/images/logo.jpeg" alt="Logo CETMB">
+          <h1>CET Mgr <br>
+            Bakpessi</h1>
+        </div>
+      
+        <nav class="nav-menu active" id="navMenu">
+          <ul class="menu">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="#Apropos">À propos</a></li>
+            <li><a href="./orientation.html">Orientation</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Nos Filières ▼</a>
+              <ul class="dropdown-menu">
+                <li><a href="./serie_F.html">Série F – Techniques Industrielles</a></li>
+                <li><a href="./serie_G.html">Série G – Techniques Administratives</a></li>
+              </ul>
+            </li>
+      
+            <li><a href="./galerie.html">Notre Galerie</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+          <button class="menu_hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+            <img src="../assets/images/imgi_2_menu_humburger.png" alt="Icône du menu" class="menu_hamburger">
+        </button>
+
+        
+    </header>
+
+  <section class="hero">
+    <div class="hero-image">
+      <img src="../assets/images/f1imge.jpeg" alt="Orientation scolaire">
+    </div>
+
+    <div class="hero-text">
+      <h2>Orientation Scolaire</h2>
+      <p>
+        À <strong>CETMB</strong>, nous croyons que chaque élève mérite une orientation adaptée à ses ambitions et capacités.
+        Notre service d’orientation scolaire est conçu pour guider les élèves tout au long de leur parcours,
+        de la Seconde à la Terminale, en leur fournissant les outils et les conseils nécessaires pour faire
+        des choix éclairés concernant leur futur académique et professionnel.
+      </p>
+    </div>
+  </section>
+
+  <section class="contenu">
+    <h3>ORIENTATION SCOLAIRE : LE CHOIX DES FILIÈRES ET DES MÉTIERS</h3>
+
+    <p>
+      Depuis toujours, de nombreux jeunes africains, après leur baccalauréat, se retrouvent
+      complètement désorientés. Pour certains, ce premier diplôme universitaire sonne la fin
+      d’un cursus scolaire normal.
+    </p>
+
+    <p>
+      Plus de 90% d’au moins un parent des élèves en terminal n’a pas fait des études supérieures.
+     Plus de 75% des étudiants en première année n’ont pas d’aîné à l’université ou ayant fait des études
+     supérieures. Si l’enseignement secondaire paraît presque linéaire, les études universitaires requièrent 
+    un choix qui fonde la carrière et l’avenir, la vie, la société et le développement de la Nation.
+    </p>
+
+    <p>
+      Les campus africains regorgent de plusieurs étudiants qui ont fait trois années en première année 
+      et ce non pas par incapacité mais par une mauvaise orientation. Ces étudiants qui généralement ne 
+      sont pas déméritant, se sont confrontés à un problème de choix et ont « bâclé » une année universitaire,
+       une carrière et peu être une vie. Après deux voire trois années en stagnation universitaire, les jeunes
+        abandonnent l’école supérieure, officine fondamentale pour la « fabrication » de la ressource humaine 
+        nécessaire pour le développement de nos pays. Seul
+    </p>
+    <p>
+      15% (et parfois moins) des étudiants africains s’inscrivent dans les filières de leur choix.
+       Au lendemain du baccalauréat, le flou s’installe dans la tête des aspirants à l’université qui 
+       finissent par faire un choix par tâtonnement c’est à dire sans passion réelle alors que « rien de grand
+        ne sait fait sans passion ». Nos Etats ne disposent pas de structures idoines pour assister les élèves
+         dans la recherche de leur devenir académique et professionnel.
+    </p>
+
+    <p class="important">
+      Comment orienter efficacement les jeunes africains dans le choix des filières universitaires
+      et professionnelles ?
+    </p>
+
+    <p class="highlight">
+      Le Collège d'Enseignement Technique Mgr Bakpessi vous accompagne depuis la séconde jusqu’en terminale, dans une série de process qui permet au jeune de
+      faire un choix objectif de sa filière universitaire avant même de passer le baccalauréat.
+       L’expertise <strong>CETMB</strong> est basée sur les méthodes pratiques occidentales qui ont fait
+      leur preuve. Prenez rendez-vous avec nos experts pour plus de détails
+    </p>
+
+    <a href="./contact.html" class="btn">PRENDRE RENDEZ-VOUS AVEC UN EXPERT ICI</a>
+  </section>
+
+  <!-- IMAGE BAS -->
+  <section class="image-bas">
+    <img src="../assets/images/f4img.jpeg" alt="Séance d’orientation">
+  </section>
+  <footer>
+    <div class="container_footer">
+        <div class="fin">
+            <h4 style="color: #ffffff;">Collège d'Enseignement Technique Mgr Bakpessi <strong>CETMB</strong></h4>
+            <p>Quartier Chaminade, près du dépôt de boissons Sodibo, Kara, BP : 484,  Du côté sud juste derrière, 
+            l'Ancienne pharmacie Kara-Centre</p>
+            <p>Téléphone : +228 90 34 80 81</p>
+        </div>
+        <div class="fin d_liens">
+            <h3>Liens utiles</h3>
+            <ul>
+                <li><a href='/'>Accueil</a></li>
+                <li><a href='/formations_final'>Nos Filières</a></li>
+                <li><a href='/contact_final'>Contact</a></li>
+                
+            </ul>
+        </div>
+        <div class="fin d_lien">
+            <h3>Suivez-nous</h3>
+            <div class="reseaux">
+                
+                <a href="https://www.facebook.com/share/16Ac6cT6Aw/ "><i class="bx bxl-facebook"></i></a>
+            <a href="https://vm.tiktok.com/ZMSBpNXnn/ "><i class="bx bxl-tiktok"></i></a>
+            
+            </div>
+        </div>
+       
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; Collège  d'Ensignement  Technique  Monseigneur  Bakpessi  2025 | Tous Droits Reservés.</p>
+    </div>
+</footer>
+
+
+<a href="#top" id="up">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M7 14l5-5 5 5z"/>
+    </svg>
+</a>
+
+  <script src="../function.js"></script>
+</body>
+</html>

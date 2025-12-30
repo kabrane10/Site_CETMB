@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription en ligne</title>
+    <link rel="stylesheet" href="./formulaire.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="../assets/images/logo.jpeg" alt="Logo CETMB">
+          <h1>CET Mgr <br>
+            Bakpessi</h1>
+        </div>
+      
+        <nav class="nav-menu active" id="navMenu">
+          <ul class="menu">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="#Apropos">À propos</a></li>
+            <li><a href="./orientation.html">Orientation</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Nos Filières ▼</a>
+              <ul class="dropdown-menu">
+                <li><a href="./serie_F.html">Série F – Techniques Industrielles</a></li>
+                <li><a href="./serie_G.html">Série G – Techniques Administratives</a></li>
+              </ul>
+            </li>
+      
+            <li><a href="./galerie.html">Notre Galerie</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+          <button class="menu_hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+            <img src="../assets/images/imgi_2_menu_humburger.png" alt="Icône du menu" class="menu_hamburger">
+        </button>
+
+        
+    </header>
+    <section id="inscription">
+        <h2 id="titre">Formulaire d'inscription en ligne</h2>
+
+        <form action="./inscription.html" class="inscription" method="POST">
+            <label>Nom et Prénoms</label>
+          <input type="text" name="nom" placeholder="Veuillez saisir votre nom et prénom" required>
+      
+          <label id="choix">Date de naissance</label>
+          <input type="date" name="date_naissance" required>
+      
+          
+          <label>Téléphone</label>
+          <input type="tel" name="telephone" placeholder="Numéro de téléphone" required> <br>
+          
+          <label>Email</label>
+          <input type="email" name="email" placeholder="exrmple@gmal.com">
+          <label>Adresse</label>
+          <select id="choice" name="sexe" required>
+            <option value="">-- Ville --</option>
+            <option>Lomé</option>
+            <option>Kara</option>
+            <option>Tsévié</option>
+            <option>Sokodé</option>
+            <option>Dapaong</option>
+            <option>Atakpamé</option>
+            <option>Autres</option>
+          </select>
+      
+          <label>Sexe</label>
+          <select id="choice" name="sexe" required>
+            <option value="">-- Choisir --</option>
+            <option>Masculin</option>
+            <option>Féminin</option>
+          </select>
+      
+          <label>Filière choisie</label>
+          <select id="choice" name="filiere" required>
+            <option value="">--choix de filière--</option>
+            <option>G1</option>
+            <option>G2</option>
+            <option>G3</option>
+            <option>F1</option>
+            <option>F2</option>
+            <option>F3</option>
+            <option>F4</option>
+            <option>E</option>
+          </select> <br>
+      
+          <label>Message</label>
+          <textarea name="adresse" rows="5" placeholder="votre message..."></textarea>
+      
+          <button type="submit">Envoyer l'inscription</button>
+
+        </form>
+    </section>
+    <footer class="footer-bottom">
+        <p>&copy; Collège  d'Ensignement  Technique  Monseigneur  Bakpessi  2025 | Tous Droits Reservés.</p>
+    </footer>
+    <script src="../function.js"></script>
+</body>
+</html>
