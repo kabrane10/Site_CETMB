@@ -1,3 +1,308 @@
+/* LOGO */
+.logo {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.logo-main {
+  margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo-sub {
+    font-size: 20px;
+    color: #666;
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pré‑inscription CETMB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <section class="preinscription">
+    <div class="form-container">
+  
+      <h1>Pré‑inscription CETMB</h1>
+      <p>Veuillez remplir le formulaire ci‑dessous</p>
+  
+      <form id="preinscription-form">
+
+          <label for="nomPrenom">Nom et Prénom</label>
+          <input type="text" name="nom" placeholder="Nom et Prénom" required>
+
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="example@gmail.com" required>
+
+    
+          <label for="phone">Téléphone</label>
+          <input type="number" name="tel_eleve" placeholder="Numéro de téléphone" required>
+        
+          <label for="sexe">Sexe</label>
+          <select name="sexe" required>
+            <option value="">--Sexe--</option>
+            <option>Masculin</option>
+            <option>Féminin</option>
+          </select>
+          <label for="date">Date de Naissance</label>
+          <input type="date" name="naissance" required>
+
+          <label for="classe">Choix de classe</label>
+          <select name="classe" required>
+            <option value="">--Choisir--</option>
+            <option>Seconde</option>
+            <option>Première</option>
+            <option>Terminale</option>
+          </select>
+
+          <label for="filiere">Choix de filières</label>
+          <select name="filiere" required>
+            <option value="">--Filières--</option>
+            <option>F1 – Électricité</option>
+            <option>F2 – Mécanique</option>
+            <option>F3 – Électrotechnique</option>
+            <option>F4 – Génie Civil</option>
+            <option>G1 – Secrétariat</option>
+            <option>G2 – Comptabilité</option>
+            <option>G3 – Commerce</option>
+          </select>
+  
+          <label for="origine">Établissement de provenance</label>
+          <input type="text" name="origine" placeholder="Établissement d’origine" required>
+  
+          <label for="message">Message</label>
+          <textarea name="message" placeholder="Message (optionnel)"></textarea>
+  
+        <button type="submit" class="btn">Soumettre</button>
+  
+        <p id="successMessage" class="success"></p>
+  
+      </form>
+  
+    </div>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+  
+      /* VARIABLES */
+:root {
+    --primary: #1f5d3a;
+    --dark: #1c1c1c;
+    --light: #ffffff;
+    --gray: #f5f5f5;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: var(--primary);
+}
+
+/* HEADER */
+.header {
+    background: var(--light);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo-sub {
+    font-size: 12px;
+    color: #666;
+}
+
+
+
+.preinscription {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.preinscription h2 {
+  text-align: center;
+  color: #1f5d3a;
+  font-size: 32px;
+}
+
+.preinscription p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background:#1f5d3a;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: #ffffff;
+  color:#1f5d3a;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 150px;
+}
+
+.btn:hover {
+  background: #0a351c;;
+}
+
+.success {
+  color: green;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* PAGE MERCI */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f5;
+}
+
+/* SECTION */
+.preinscription {
+
+
+    background: linear-gradient(
+      rgba(249, 250, 250, 0.85),
+      rgba(246, 247, 246, 0.85)
+    ),
+    url("./bat.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+/* FORM BOX */
+.form-container {
+  background: white;
+  max-width: 800px; 
+  width: 100%;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.form-container h1 {
+  color: #1f5d3a;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* FORM */
+form input, form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  background: #1f5d3a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #184a2f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 30px 20px;
+  }
+}
+
+
+
+
+
+
+
 let texte = document.querySelector("p");
 let contenu = texte.innerHTML;
 texte.innerHTML = '';

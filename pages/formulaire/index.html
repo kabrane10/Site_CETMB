@@ -1,32 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CETMB</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-
-<header class="header">
-  <div class="container">
-
-    <div class="logo">
-      <span class="logo-main">CETMB</span>
-      <span class="logo-sub">Collège d’Enseignement Technique Mgr BAKPESSI</span>
-    </div>
-
-      <div class="hamburger" id="hamburger">
-       
-      </div>
-    </nav>
-
-  </div>
-</header>
-
-
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,8 +6,40 @@
   <title>Pré‑inscription | CETMB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
+  <header class="header">
+    <div class="logo">
+      <img src="../../assets/images/logo.jpeg" alt="Logo CETMB">
+      <h1>CET Mgr <br>
+        Bakpessi</h1>
+    </div>
+  
+    <nav class="nav-menu active" id="navMenu">
+      <ul class="menu">
+        <li><a href="../../index.html">Accueil</a></li>
+        <li><a href="#Apropos">À propos</a></li>
+        <li><a href="../orientation.html">Orientation</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Nos Filières ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="../serie_F.html">Série F – Techniques Industrielles</a></li>
+            <li><a href="../serie_G.html">Série G – Techniques Administratives</a></li>
+          </ul>
+        </li>
+  
+        <li><a href="../galerie.html">Notre Galerie</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+      <button class="menu_hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <img src="../../assets/images/imgi_2_menu_humburger.png" alt="Icône du menu" class="menu_hamburger">
+    </button>
+
+    
+</header>
+
 
 <section class="preinscription">
   <div class="form-container">
@@ -49,24 +52,35 @@
       <form id="preinscriptionForm">
 
       <div class="form-group">
+        <label for="nom">Nom et prénom</label>
         <input type="text" name="nom" placeholder="Nom et Prénom" required>
       </div>
-
       <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Votre.example@gamil.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Téléphone</label>
+        <input type="number" name="tel_eleve" placeholder="Numéro de téléphone" required>
+      </div>
+      <div class="form-group">
+        <label for="sexe">Choisir votre sexe</label>
         <select name="sexe" required>
-          <option value="">Sexe</option>
+          <option value="">--sexe--</option>
           <option>Masculin</option>
           <option>Féminin</option>
         </select>
       </div>
 
       <div class="form-group">
+        <label for="date">Date de naissance</label>
         <input type="date" name="naissance" required>
       </div>
 
       <div class="form-group">
         <select name="classe" required>
-          <option value="">Classe demandée</option>
+          <option value="">--Choisir classe--</option>
           <option>Seconde</option>
           <option>Première</option>
           <option>Terminale</option>
@@ -74,8 +88,9 @@
       </div>
 
       <div class="form-group">
+        <label for="filiere">Choix de Filières</label>
         <select name="filiere" required>
-          <option value="">Filière</option>
+          <option value="">--Choisir filière--</option>
           <option>F1 – Électricité</option>
           <option>F2 – Mécanique</option>
           <option>F3 – Électrotechnique</option>
@@ -87,22 +102,17 @@
       </div>
 
       <div class="form-group">
+        <label for="origin">École de provenance</label>
         <input type="text" name="origine" placeholder="Établissement d’origine" required>
       </div>
 
-      <div class="form-group">
-        <input type="tel" name="tel_eleve" placeholder="Téléphone de l’élève" required>
-      </div>
 
       <div class="form-group">
-        <input type="tel" name="tel_parent" placeholder="Téléphone du parent" required>
-      </div>
-
-      <div class="form-group">
+        <label for="message">Message</label>
         <textarea name="message" placeholder="Message (optionnel)"></textarea>
       </div>
 
-      <button type="submit" class="btn">Envoyer la pré‑inscription</button>
+      <button type="submit" class="btn">Soumettre</button>
 
       <p id="successMessage" class="success"></p>
 
@@ -115,6 +125,3 @@
 </body>
 </html>
 
-<script src="script.js"></script>
-</body>
-</html>

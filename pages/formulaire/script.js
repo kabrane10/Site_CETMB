@@ -1,3 +1,36 @@
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdown = document.querySelector(".dropdown");
+
+  // Menu hamburger
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  // Sous-menu mobile
+  dropdownToggle.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      dropdown.classList.toggle("active");
+    }
+  });
+
+  // Fermer menu au clic extérieur
+  document.addEventListener("click", (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+      navMenu.classList.remove("active");
+      dropdown.classList.remove("active");
+    }
+  });
+});
+
+
+
+
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 const dropdowns = document.querySelectorAll(".dropdown-btn");
