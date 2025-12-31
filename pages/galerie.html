@@ -39,60 +39,90 @@
         
     </header>
     <h2>Découvrez quelques images de notre Galerie</h2>
-    <section class="galerie">
-        <div>
-            <h2>Activités pédagogiques et pratiques</h2>
-            <div class="carousel">
-                <button class="prev">&#10094;</button>
-                <div class="image-carousel" id="pictures">
-                   <img src="./../assets/images/image8.jpg" alt="">
-                   <img src="./../assets/images/image-8.jpg" alt="">
-                   <img src="./../assets/images/image5.jpg" alt="">
-                   <img src="./../assets/images/image5.jpg" alt="">
-                   <img src="" alt="">
-                   <img src="" alt="">
-                </div>
-                <button class="next">&#10095;</button>
-            </div>
-        <div>
-            <h2>Activités Sportives</h2>
-            <div class="carousel">
-                <button class="prev">&#10094;</button>
-                <div class="image-carousel" id="pictures">
-                   <img src="./../assets/images/administra.jpeg" alt="">
-                   <img src="./../assets/images/administrat.jpeg" alt="">
-                   <img src="./../assets/images/comptab.jpeg" alt="">
-                   <img src="./../assets/images/f3imge.jpeg" alt="">
-                   <img src="./../assets/images/f3imges.jpeg" alt="">
-                   <img src="./../assets/images/administra.jpeg" alt="">
-                   <img src="./../assets/images/image-0.jpg" alt="">
-                   <img src="./../assets/images/administrat.jpeg" alt="">
-                </div>
-                <button class="next">&#10095;</button>
-            </div>
-        <div>
-            <h2>Activités Culturelles</h2>
-            <div class="carousel">
-                <button class="prev">&#10094;</button>
-                <div class="image-carousel" id="pictures">
-                   <img src="./../assets/images/imgi_5_14U3AeaDS7h53WFAxxuAPK2SmigbTOw0s.png" alt="">
-                   <img src="./../assets/images/imgi_14.png" alt="">
-                   <img src="./../assets/images/imgi_15.png" alt="">
-                   <img src="./../assets/images/imgi_1.png" alt="">
-                   <img src="./../assets/images/imgi_14.png" alt="">
-                   <img src="./../assets/images/imgi_5_14U3AeaDS7h53WFAxxuAPK2SmigbTOw0s.png" alt="">
-                   <img src="./../assets/images/imgi_1.png" alt="">
-                </div>
-                <button class="next">&#10095;</button>
-            </div>    
+    <section class="galerie-section">
+      <h1>Galerie du CETMB</h1>
+      <p class="subtitle">Vie pédagogique, culturelle et pratique professionnelle</p>
+    
+      <!-- FILTRES -->
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="pedagogique">Activités pédagogiques</button>
+        <button class="filter-btn" data-filter="culturelle">Activités culturelles</button>
+        <button class="filter-btn" data-filter="pratique">Pratique des cours</button>
+      </div>
+    
+      <!-- GRILLE -->
+      <div class="gallery-grid">
+    
+        <!-- PEDAGOGIQUE -->
+        <div class="gallery-item pedagogique">
+          <img src="./../assets/images/secret.jpeg" alt="">
+          <div class="caption">Travaux dirigés en salle</div>
         </div>
+        <div class="gallery-item pedagogique">
+          <img src="./../assets/images/secreta.jpeg" alt="">
+          <div class="caption">Cours encadré par un enseignant</div>
+        </div>
+        <div class="gallery-item pedagogique">
+          <img src="./../assets/images/secretariat.jpeg" alt="">
+          <div class="caption">Présentation en classe</div>
+        </div>
+        <div class="gallery-item pedagogique">
+          <img src="./../assets/images/6660f05d-8125-4096-a740-48d492c0b8de.jpg" alt="">
+          <div class="caption">Suivi pédagogique</div>
+        </div>
+    
+        <!-- CULTURELLE -->
+        <div class="gallery-item culturelle">
+          <img src="./../assets/images/f1img.jpeg" alt="">
+          <div class="caption">Journée culturelle</div>
+        </div>
+        <div class="gallery-item culturelle">
+          <img src="./../assets/images/f1imge.jpeg" alt="">
+          <div class="caption">Défilé scolaire</div>
+        </div>
+        <div class="gallery-item culturelle">
+          <img src="./../assets/images/f3imges.jpeg" alt="">
+          <div class="caption">Expression artistique</div>
+        </div>
+        <div class="gallery-item culturelle">
+          <img src="./../assets/images/f3imges.jpeg" alt="">
+          <div class="caption">Célébration éducative</div>
+        </div>
+    
+        <!-- PRATIQUE -->
+        <div class="gallery-item pratique">
+          <img src="./../assets/images/image-7.jpg" alt="">
+          <div class="caption">Atelier pratique</div>
+        </div>
+        <div class="gallery-item pratique">
+          <img src="./../assets/images/imgi_14.png" alt="">
+          <div class="caption">Manipulation technique</div>
+        </div>
+        <div class="gallery-item pratique">
+          <img src="./../assets/images/image9.jpg" alt="">
+          <div class="caption">Travaux en groupe</div>
+        </div>
+        <div class="gallery-item pratique">
+          <img src="./../assets/images/imgi_15.png" alt="">
+          <div class="caption">Formation professionnelle</div>
+        </div>
+    
+      </div>
     </section>
+    
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <span class="close">&times;</span>
+      <img id="lightbox-img">
+    </div>
+  
     <footer footer-bottom>
         <p>&copy; Collège  d'Ensignement  Technique  Monseigneur  Bakpessi  2025 | Tous Droits Reservés.</p>
     </footer>
 
 
-
+    <script src="galerie.js"></script>
     <script src="../function.js"></script>
 </body>
 </html>
