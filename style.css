@@ -503,52 +503,92 @@ h2, p{
 
 
 
-                    /*=======================Partie contacter nous==========================*/
-.contact{
-  background-color: #b4f0b4;
-  max-width: 100%;
-  margin: 0 70px; 
-  border-radius: 5px;
-  padding: 10px;
-  align-items: center;
+/*============================================
+SECTION TENUE OFFICILLLE
+==========================================*/
+.tenue-section {
+  max-width: 500px; /* empêche que ça soit trop grand */
+  margin: 60px auto;
+  padding: 0 20px;
 }
-h3{
-  font-size: 1.2em;
-  margin-top: 60px;
+
+.tenue-section h2 {
   text-align: center;
   color: #263575;
+  margin-bottom: 10px;
 }
-.conact-form label{
-  display: "";
-  margin-bottom: 15px;
-  font-weight: 600
+
+.tenue-desc {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.05rem;
 }
-.label{
-  margin-bottom: 2px;
-  font-size: 1.2em;
+
+/* ===== BLOC PRINCIPAL ===== */
+.tenue-bloc {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+  align-items: stretch;
+  margin-bottom: 50px;
 }
-.contact-form input, textarea{
+
+/* IMAGE PRINCIPALE */
+.tenue-image-principale img {
   width: 100%;
-  padding: 15px 0;
-  border: 1px solid #02aa02;
-  border-radius: 4px;
-  margin-bottom: 15px;
+  height: auto; /* TAILLE CONTRÔLÉE */
+  object-fit: contain;
+  border-radius: 12px;
 }
-.contact-form button{
-  background-color: #02aa02;
-  padding: 12px 30px;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+
+/* COLONNE DES 3 CASES */
+.tenue-couleurs {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.couleur {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
-  border-radius: 5px;
-  transition: 0.5s;
+  border-radius: 10px;
+  font-size: 1.1rem;
 }
 
-.contact-form button:hover{
-  background-color: #ffffff;
-  color:#02aa02;
+/* COULEURS */
 
+.blanc {
+  background: #ffffff;
+  border: 2px solid #ddd;
+  
+}
+
+.vert {
+  text-align: center;
+  background: #0ccc3c;
+  color: #fff;
+}
+
+.kaki {
+  background: #bf884b;
+  color: #fff;
+}
+/* ===== RESPONSIVE MOBILE ===== */
+@media (min-width: 768px) {
+  .tenue-bloc {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tenue-image-principale img {
+    height: 300px;
+  }
+
+  .tenue-couleurs {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: none;
+  }
 }
 
 
