@@ -30,7 +30,7 @@ body {
 /* LOGO */
  .logo  {
   display: inline;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   color: #1f5d3a;
   text-decoration: none;
@@ -89,8 +89,8 @@ body {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-links {
-    gap: 8px;
-    font-size: 13px;
+    gap: 4px;
+    font-size: 10px;
   }
 }
 
