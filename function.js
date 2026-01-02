@@ -1,5 +1,7 @@
 
-    
+//========================================================================
+//======                Js du menu hunburger                    ==========
+//========================================================================== 
     
   document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
@@ -30,7 +32,9 @@
 });
 
 
-
+//===================================================================================================
+//=====                Js d'element-carrousel(defilement des trois images)            =======
+//===================================================================================================
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".element-carrousel");
     let indexActuel = 0;
@@ -74,16 +78,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  //================pour galerie====================
-  const buttons = document.querySelectorAll('.filter-btn');
-const items = document.querySelectorAll('.gallery-item');
+  //===========================================================================
+  //====                          pour galerie                            =====
+  //===========================================================================
+  const buttons = document.querySelectorAll('.filtre-btn');
+const items = document.querySelectorAll('.element-galerie');
 
 buttons.forEach(btn=>{
   btn.addEventListener('click', ()=>{
     buttons.forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
 
-    const filter = btn.dataset.filter;
+    const filter = btn.dataset.filtre;
 
     items.forEach(item=>{
       item.style.display =

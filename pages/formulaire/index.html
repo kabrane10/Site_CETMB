@@ -47,13 +47,13 @@
     <h1>Pré‑inscription CETMB</h1>
     <p>Veuillez remplir le formulaire ci‑dessous</p>
 
-    <form id="preinscription-form">
+    <form method="POST" action="../../traitetement/traitement.php" id="preinscription-form">
 
-      <form id="preinscriptionForm">
+      <form method="POST" action="../../traitetement/traitement.php" id="preinscriptionForm">
 
       <div class="form-group">
         <label for="nom">Nom et prénom</label>
-        <input type="text" name="nom" placeholder="Nom et Prénom" required>
+        <input type="text" name="nom_prenom" placeholder="Nom et Prénom" required>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
@@ -62,7 +62,7 @@
       
       <div class="form-group">
         <label for="phone">Téléphone</label>
-        <input type="number" name="tel_eleve" placeholder="Numéro de téléphone" required>
+        <input type="number" name="telephone" placeholder="Numéro de téléphone" required>
       </div>
       <div class="form-group">
         <label for="sexe">Choisir votre sexe</label>
@@ -75,10 +75,11 @@
 
       <div class="form-group">
         <label for="date">Date de naissance</label>
-        <input type="date" name="naissance" required>
+        <input type="date" name="date_naissance" required>
       </div>
 
       <div class="form-group">
+        <label for="classe">Classes</label>
         <select name="classe" required>
           <option value="">--Choisir classe--</option>
           <option>Seconde</option>
@@ -103,7 +104,7 @@
 
       <div class="form-group">
         <label for="origin">École de provenance</label>
-        <input type="text" name="origine" placeholder="Établissement d’origine" required>
+        <input type="text" name="provenance" placeholder="Établissement d’origine" required>
       </div>
 
 
