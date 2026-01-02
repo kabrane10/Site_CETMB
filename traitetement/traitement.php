@@ -1,52 +1,49 @@
 
 
 <?php
-//============================================Connexion à la base de données=========
+// 1. Connexion à la base de données
 require '../config/database.php';
 
-
-//========Appelle de la fonction 'connecterBD() pouyr établir une connexion à la base de donnnées'
 $connexion = connecterBD();
 
+// 2. Récupération sécurisée des données (évite les erreurs si un champ est vide)
+$nom_prenom = $_POST['nom_prenom'] ?? '';
+$email      = $_POST['email'] ?? '';
+$objet      = $_POST['objet'] ?? '';
+$message    = $_POST['message'] ?? '';
 
-//===== Récupération des données  du formulaires
+// 3. Préparation de la requête SQL avec des marqueurs (?)
+// Note : "VALUES" prend un S, et on place des ? pour chaque donnée
 
-$nom_prenom = $_POST['nom_prenom'];
-$email = $_POST['email'];
-$objet = $_POST['objet'];
-$message = $_POST['message'];
+$sql_users = "INSERT INTO users (nom_prenom, email, objet, messages) VALUES (?, ?, ?, ?)";
 
-//========partie inscription========
+$resultat = $connexion->prepare($sql_users);
 
-$nom = $_POST['nom_prenom'];
-$email = $_POST['email'];
-$telephone = $_POST['telephone'];
-$sexe = $_POST['sexe'];
-$date = $_POST['date_naissance'];
-$classe = $_POST['classe'];
-$filieres = $_POST['filiere'];
-$ecole = $_POST['provenance'];
-$messages = $_POST['message'];
+if ($resultat) {
 
-//=========Création de la requête SQL
-$sql_users = "INSERT INTO users (nom_prenom, email, objet, messages) 
-VALUE ('$nom_prenom', '$email', '$objet', '$message')";
+    // 4. Liaison des paramètres (ssss signifie que les 4 variables sont des chaines/strings)
 
-$inscription = "INSERT INTO inscriptions (nom_prenom, email, telephone, sexe, date_naissance, classe, filieres,
-ecole_provenance, messages) VALUE ('$nom', '$email', '$telephone', '$sexe', '$date', '$classe', '$filieres', 
-'$ecole', '$messages')";
+    $resultat->bind_param("ssss", $nom_prenom, $email, $objet, $message);
+    
+    // 5. Exécution de la requête
+    if ($resultat->execute()) {
+        // Succès : Redirection
+        header("Location: ../pages/formulaire/merci.html");
+        exit;
+    } else {
+        echo "Erreur lors de l'enregistrement : " . $resultat->error;
+    }
+    
+    $resultat->close();
+} else {
+    echo "Erreur de préparation SQL : " . $connexion->error;
+}
 
-
-//====Exécution de la requête SQL
-$resultat = $connexion->query($sql_users);
-
-$resultat = $connexion->query($inscription);
+$connexion->close();
+?>
 
 
-//Affichage des données POST reçues
-echo "<pre>";
-print_r($_POST);
-echo "</pre>"; 
+
 
 
 
