@@ -33,7 +33,7 @@
 
 
 //===================================================================================================
-//=====                Js d'element-carrousel(defilement des trois images)            =======
+//=====                Js d'element-carrousel(defilement des six images)            =======
 //===================================================================================================
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".element-carrousel");
@@ -126,11 +126,4 @@ closeBtn.onclick = ()=> lightbox.style.display='none';
 lightbox.onclick = e=>{
   if(e.target === lightbox) lightbox.style.display='none';
 };
-
-
-
-
-  
-
-
 

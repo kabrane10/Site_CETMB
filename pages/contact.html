@@ -2,74 +2,24 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Contact | CETMB Kara</title>
+    <title>Contact CETMB Kara</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/images/logo.jpeg">
+    <link rel="shortcut icon" href="../assets/images/logo.jpg">
     
-    <link rel="shortcut icon" href="../assets/images/logo.jpeg">
+    
     <link rel="stylesheet" href="../style.css">
     <style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-img{
-    max-width: 100%;
-
-}   
-.slider-container{
-    margin: 20px auto;
-   max-width: 800px;
-   position: relative;
-   height: 350px;
-   overflow: hidden;
-}     
-.menus{
-    position: absolute;
-    left: 0;
-    z-index: 11;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-
-}
-.menus label{
-    cursor: pointer;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50px;
-    background: #ccc;
-    margin: 0 0.2em 1em;
-
-}
-.menus label:hover, .menus label:focus{
-    background: #1c87c9;
-}
-.slide-input{
-    opacity: 0;
-
-}
-.slide-img{
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    z-index: 10;
-    transition: left 0s 0.75s;
-}
-[id^="slide"]:checked + .slide-img{
-    left: 0;
-    z-index: 100;
-    transition: left 0.65s ease-out;
-}
 
     </style>
 </head>
 <body>
     <header class="header">
         <div class="logo">
-          <img src="../assets/images/logo.jpeg" alt="Logo CETMB">
+          <img src="../assets/images/logo.jpg" alt="Logo CETMB">
           <h1>CET Mgr <br>
-            Bakpessi</h1>
+              Bakpessi</h1>
         </div>
       
         <nav class="nav-menu" id="navMenu">
@@ -122,74 +72,124 @@ img{
         <input class="slide-input" id="slide-dot-6" type="radio" name="slides">
         <img class="slide-img" src="../assets/images/image-5.jpg" alt="">
 
-
-
-
         
     </div>
-<section class="contact-hero">
-    <h2>Contactez-nous</h2>
-    <p>Nous sommes à votre écoute pour toute information ou inscription</p>
-</section>
+    <section class="map-section">
+        <div class="map-container">
+      
+          <!-- Carte Google -->
+          <div class="map">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31718.24675520433!2d1.205!3d6.137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102158f0e2b0e6b7%3A0x9b7a0d7f12345678!2sLom%C3%A9!5e0!3m2!1sfr!2stg!4v123456789"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+      
+          <!-- Description -->
+          <div class="map-description">
 
-<section class="contact-container">
+            <h3 class="map-title">
+              <img src="../assets/images/location.jpg" alt="">
+              Notre localisation
+            </h3>
+          
+            <p class="map-text">
+              Nous sommes situés au cœur de la ville, facilement accessibles en transport.
+              Cette carte vous permet de localiser rapidement notre établissement et
+              de planifier votre itinéraire.
+            </p>
+          
+            <div class="map-info">
+          
+              <div class="info-item">
+                <img src="../assets/images/location.jpg" alt="">
+                <span><strong>Adresse :</strong> Kara, Togo</span>
+              </div>
+          
+              <div class="info-item">
+                <img src="../assets/images/tel.jpg" alt="">
+                <span><strong>Téléphone :</strong> +228 90 34 80 81</span>
+              </div>
+          
+              <div class="info-item">
+                <img src="../assets/images/montre.jpg" alt="">
+                <span><strong>Horaires :</strong> Lun – Ven : 8h à 18h</span>
+              </div>
+          
+            </div>
+          
+          </div>
+          
+    </section>
+      
+    <section class="contact-hero">
+        <h2>Contactez-nous</h2>
+        <p>Nous sommes à votre écoute pour toute information ou inscription</p>
+    </section>
 
-    <!-- INFOS CONTACT -->
-    <div class="contact-info">
-        <h3>Nos coordonnées</h3>
+    <section class="contact-container">
 
-        <p><strong>Adresse :</strong><br>
+        <!-- INFOS CONTACT -->
+        <div class="contact-info">
+            <h3>Nos coordonnées</h3>
+
+            <p><strong>Adresse :</strong><br>
             Kara – Commune Kozah 1<br>
             Quartier Chaminade, près du dépôt de boissons SODIBO
-        </p>
-        <p><strong>Téléphone :</strong> +228 90 34 80 81</p>
+            </p>
+            <p><strong>Téléphone :</strong> +228 90 34 80 81</p>
 
-        <p><strong>Boîte Postale :</strong> BP 484 – Kara</p>
+            <p><strong>Boîte Postale :</strong> BP 484 – Kara</p>
 
-        <p><strong>Statut :</strong> Collège Laïc agréé par l’État</p>
+            <p><strong>Statut :</strong> Collège Laïc agréé par l’État</p>
 
-        <p><strong>N° d’agrément :</strong><br>
+            <p><strong>N° d’agrément :</strong><br>
             2022/013/MEPSTA/META/CAB/SE-CCCS
-        </p>
+            </p>
 
-        <p><strong>Devise :</strong><br>
+            <p><strong>Devise :</strong><br>
             Savoir – Savoir-faire – Savoir-être
-        </p>
-    </div>
+            </p>
+        </div>
 
-    <!-- FORMULAIRE -->
-    <div class="contact-form">
-        <h3>✉️ Envoyez-nous un message</h3>
+        <!-- FORMULAIRE -->
+        <div class="contact-form">
+            <h3>✉️ Envoyez-nous un message</h3>
 
-        <form method="POST" action="../traitetement/traitement.php">
-            <input type="text" name="nom_prenom" placeholder="Votre nom complet" required>
+            <form method="POST" action="../traitetement/traitement.php">
+                <input type="text" name="nom_prenom" placeholder="Votre nom complet" required>
 
-            <input type="email" name="email" placeholder="Votre email" required>
+                <input type="email" name="email" placeholder="Votre email" required>
 
-            <input type="text" name="objet" placeholder="Objet du message" required>
+                <input type="text" name="objet" placeholder="Objet du message" required>
 
-            <textarea name="message" placeholder="Votre message..." required></textarea>
+                <textarea name="message" placeholder="Votre message..." required></textarea>
 
-            <button type="submit">Envoyer le message</button>
-        </form>
-    </div>
+                <button type="submit">Envoyer le message</button>
+            </form>
+        </div>
 
-</section>
+    </section>
 
 <footer>
     <div class="container_footer">
         <div class="fin">
             <h4 style="color: #ffffff;">Collège d'Enseignement Technique Mgr Bakpessi <strong>CETMB</strong></h4>
-            <p>Quartier Chaminade, près du dépôt de boissons Sodibo, Kara, BP : 484,  Du côté sud juste derrière, 
+            <p>Quartier Chaminade, près du dépôt de boissons Sodibo, Kara,<br>
+               BP : 484,  Du côté sud juste derrière, 
             l'Ancienne pharmacie Kara-Centre</p>
             <p>Téléphone : +228 90 34 80 81</p>
         </div>
         <div class="fin d_liens">
             <h3>Liens utiles</h3>
             <ul>
-                <li><a href='/'>Accueil</a></li>
-                <li><a href='/formations_final'>Nos Filières</a></li>
-                <li><a href='/contact_final'>Contact</a></li>
+                <li><a href='../index.html'>Accueil</a></li>
+                <li><a href='./filiere.html'>Nos Filières</a></li>
+                <li><a href='/'>Contact</a></li>
                 
             </ul>
         </div>
