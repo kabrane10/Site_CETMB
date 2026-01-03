@@ -155,7 +155,7 @@ h1{
 }
 
 /* IMAGE BLOC */
-.image-bloc .image {
+.image-bloc .imaage {
   width: 100%;
   height: 300px;
   background-size: cover;
@@ -225,12 +225,12 @@ h1{
   background: #eaeaea;
 }
 
-.image,
+.imaage,
 .galerie-img {
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.image:hover,
+.imaage:hover,
 .galerie-img:hover {
   transform: scale(1.03);
   filter: brightness(1.05);
@@ -275,7 +275,7 @@ h1{
     font-size: 32px;
   }
 
-  .image-bloc .image {
+  .image-bloc .imaage {
     height: 220px;
   }
 

@@ -123,6 +123,7 @@
   @media (max-width: 768px) {
     .filieres {
       padding: 40px 15px;
+      margin: 5px 15px;
     }
   
     .section-title {
@@ -143,6 +144,7 @@
   
     .filiere-card {
       height: 240px;
+      margin: 0 15px;
     }
   }
   
