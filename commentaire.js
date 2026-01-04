@@ -1,5 +1,6 @@
 
-
+/*========Pour statistique==========*/
+const counters = document.querySelectorAll('.compteur');
 /*==============================JS de la section testimonial=====================*/
 let slideIndex = 0;
 showSlides(slideIndex);
@@ -36,4 +37,26 @@ function showSlides(n) {
 setInterval(() => {
     changeSlide(1);
 }, 5000);
+
+
+
+counters.forEach(compteur => {
+  const updateCount = () => {
+    const target = +compteur.getAttribute('data-target'); // Le chiffre final
+    const count = +compteur.innerText; // Le chiffre actuel
+    
+    // On définit la vitesse (plus le diviseur est petit, plus c'est rapide)
+    const speed = 100; 
+    const inc = target / speed;
+
+    if (count < target) {
+      compteur.innerText = Math.ceil(count + inc);
+      setTimeout(updateCount, 10); // Répète l'opération toutes les 10ms
+    } else {
+      compteur.innerText = target + (target === 3000 ? "+" : "%"); 
+    }
+  };
+
+  updateCount();
+});
 

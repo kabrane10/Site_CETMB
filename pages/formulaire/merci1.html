@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Merci pour votre pré‑inscription | CETMB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./../../assets/images/logo_offiele.png">
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+    *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins, Arial, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#1f5d3ada,#2f7d4fd2),
+ 
+    url("./../../assets/images/batiment.jpg");
+  background-size: cover;
+  background-position: center;
+  
+  align-items:center;
+  justify-content:center;
+}
+
+.merci-container{
+  padding:20px;
+  width:100%;
+}
+
+.merci-card{
+  background:#ffffff;
+  max-width:600px;
+  margin:auto;
+  padding:40px 30px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  animation:fadeIn 0.8s ease;
+}
+
+/* Icône succès */
+.icon-success{
+  width:80px;
+  height:80px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  background:#1f5d3a;
+  color:#fff;
+  font-size:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Titres */
+h1{
+  color:#1f5d3a;
+  margin-bottom:15px;
+}
+
+.message{
+  font-size:1.05rem;
+  color:#333;
+  line-height:1.6;
+  margin-bottom:25px;
+}
+
+/* Infos */
+.infos{
+  background:#f3f6f4;
+  padding:20px;
+  border-radius:10px;
+  text-align:left;
+  margin-bottom:30px;
+}
+
+.infos p{
+  margin-bottom:10px;
+  font-size:0.95rem;
+}
+
+/* Boutons */
+.actions{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:12px 22px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-primary{
+  background:#1f5d3a;
+  color:#fff;
+}
+
+.btn-primary:hover{
+  background:#17492d;
+}
+
+.btn-outline{
+  border:2px solid #1f5d3a;
+  color:#1f5d3a;
+}
+
+.btn-outline:hover{
+  background:#1f5d3a;
+  color:#fff;
+}
+
+/* Footer */
+.footer-text{
+  margin-top:30px;
+  font-size:0.85rem;
+  color:#666;
+}
+
+/* Animation */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width:480px){
+  .merci-card{
+    padding:30px 20px;
+  }
+
+  h1{
+    font-size:1.4rem;
+  }
+
+  .message{
+    font-size:0.95rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <main class="merci-container">
+    <div class="merci-card">
+
+      <div class="icon-success">
+        ✓
+      </div>
+
+      <h1>Merci pour votre pré‑inscription</h1>
+
+      <p class="message">
+        Votre demande de pré‑inscription au  
+        <strong>Collège d’Enseignement Technique Monseigneur BAKPESSI (CETMB)</strong>  
+        a été enregistrée avec succès.
+      </p>
+
+      <div class="infos">
+        <p>
+           <strong>Prochaine étape :</strong><br>
+          Vous serez contacté(e) prochainement par l’administration pour la
+          finalisation de votre inscription.
+        </p>
+
+        <p>
+          Veuillez vous munir des pièces nécessaires lors du dépôt du dossier.
+        </p>
+      </div>
+
+      <div class="actions">
+        <a href="./../../index.html" class="btn btn-primary">Retour à l’accueil</a>
+        <a href="./../filiere.html" class="btn btn-outline">Découvrir nos filières</a>
+      </div>
+
+      <p class="footer-text">
+        CETMB — <em>Savoir • Savoir‑faire • Savoir‑être</em>
+      </p>
+
+    </div>
+  </main>
+<!-- scc est dans le fichier style de formuaire -->
+</body>
+</html>

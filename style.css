@@ -7,6 +7,12 @@
   --white: #ffffff;
   --shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+/* Coupe le débordement horizontal sur toute la page  pour éviter la création de la marge droite
+de l'animation fade-up sur l'ensemble de la page*/
+html, body {
+  overflow-x: hidden; 
+  width: 100%;
+}
 
 body{
   background-color: #f7f2f294;
@@ -471,10 +477,11 @@ h2, p{
   display: flex;
   flex-wrap: wrap; 
   align-items: center; 
-  gap: 40px;
+  gap: 10px;
   max-width: 1200px;
   margin: 0 15px;
-  padding: 5px;
+  margin: 20px 0;
+  
 }
 
 
@@ -503,7 +510,8 @@ h2, p{
 .images {
   flex: 1 1 450px;
   display: flex;
-  gap: 15px; 
+  gap: 6px; 
+  
 }
 
 .images .imge {
@@ -514,7 +522,7 @@ h2, p{
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-  margin: 0 auto;
+ 
 }
 
 .images .imge:hover {
@@ -548,10 +556,17 @@ h2, p{
 
 /*========Parrrrrrrrtie evolution===========
 ============================================*/
+
+.evolutions{
+  border: 1px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 .evolutions h2{
-  margin-top: 30px;
+  margin-top: 40px;
   color: #263575;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .evolution{
@@ -1348,7 +1363,7 @@ CSS de la Page contact                                  =========
   margin: auto;
 }
 
-.contact-info, .contact-form {
+.contact-info, .formulaire {
   background: white;
   padding: 30px;
   border-radius: 8px;
@@ -1359,12 +1374,12 @@ CSS de la Page contact                                  =========
   text-align: left;
 }
 
-.contact-info h3, .contact-form h3 {
+.contact-info h3, .formulaire h3 {
   margin-bottom: 20px;
   color: #003366;
 }
 
-.contact-form input, .contact-form textarea {
+.formulaire input, .formulaire textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -1372,12 +1387,12 @@ CSS de la Page contact                                  =========
   border-radius: 5px;
 }
 
-.contact-form textarea {
+.formulaire textarea {
   height: 120px;
   resize: none;
 }
 
-.contact-form button {
+.formulaire button {
   background: green;
   color: white;
   padding: 12px;
@@ -1388,8 +1403,65 @@ CSS de la Page contact                                  =========
   cursor: pointer;
 }
 
-.contact-form button:hover {
+.formulaire button:hover {
   background: darkgreen;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error {
+  color: #d60000;
+  font-size: 0.85rem;
+}
+
+.counter {
+  font-size: 0.8rem;
+  text-align: right;
+  display: block;
+}
+
+.error-input {
+  border-color: #d60000;
+}
+
+/* Animation shake */
+.shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #02aa02;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 9999;
+}
+
+#toast.show {
+  opacity: 1;
 }
 
 img{
@@ -1883,5 +1955,109 @@ footer {
     height: 200px;
   }
 }
+
+/*==============================================
+=========================Section statistique=======*/
+/* ================== SECTION CHIFFRES ================== */
+.chiffres{
+  background: linear-gradient(135deg, #02aa02, #2e8b57);
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.chiffres .container{
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; 
+}
+
+/* Cadre statistique */
+.stat-box{
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 220px;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+.stat-box h2{
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.stat-box p{
+  font-size: 18px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ================== TABLETTE ================== */
+@media (max-width: 768px){
+
+  .chiffres{
+    padding: 50px 15px;
+  }
+
+  .stat-box{
+    padding: 30px 20px;
+  }
+
+  .stat-box h2{
+    font-size: 36px;
+  }
+
+  .stat-box p{
+    font-size: 16px;
+  }
+}
+
+/* ================== MOBILE ================== */
+@media (max-width: 480px){
+
+  .chiffres .container{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat-box{
+    width: 100%;
+  }
+
+  .stat-box h2{
+    font-size: 32px;
+  }
+
+  .stat-box p{
+    font-size: 15px;
+  }
+}
+
+/* ================== TRÈS GRANDS ÉCRANS ================== */
+@media (min-width: 1400px){
+
+  .stat-box h2{
+    font-size: 56px;
+  }
+
+  .stat-box p{
+    font-size: 20px;
+  }
+}
+
 
 

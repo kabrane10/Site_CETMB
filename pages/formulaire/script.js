@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Simulation d'envoi (sans base de données)
     setTimeout(function () {
-      window.location.href = "merci.html";
+      window.location.href = "merci1.html";
     }, 700);
 
   });
