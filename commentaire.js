@@ -39,24 +39,56 @@ setInterval(() => {
 }, 5000);
 
 
+// ====================JS POUR A PARTIE STATISTIQUE=================
 
-counters.forEach(compteur => {
-  const updateCount = () => {
-    const target = +compteur.getAttribute('data-target'); // Le chiffre final
-    const count = +compteur.innerText; // Le chiffre actuel
-    
-    // On définit la vitesse (plus le diviseur est petit, plus c'est rapide)
-    const speed = 100; 
-    const inc = target / speed;
+const sectionChiffres = document.querySelector('.chiffres');
 
-    if (count < target) {
-      compteur.innerText = Math.ceil(count + inc);
-      setTimeout(updateCount, 10); // Répète l'opération toutes les 10ms
-    } else {
-      compteur.innerText = target + (target === 3000 ? "+" : "%"); 
-    }
-  };
+if (sectionChiffres) {
+  
+    sectionChiffres.addEventListener('mouseenter', () => {
+        
+        const counters = document.querySelectorAll('.compteur');
 
-  updateCount();
-});
+        counters.forEach(compteur => {
+            const updateCount = () => {
+                const target = +compteur.getAttribute('data-target');
+                
+                // On récupère la valeur actuelle sans les symboles (+ ou %)
+                const currentText = compteur.innerText.replace(/[+%]/g, '');
+                const count = +currentText;
+
+                // Réglage de la vitesse : plus le diviseur est grand, plus c'est lent
+                const speed = 90; 
+                const inc = Math.max(1, target / speed); // Assure un incrément minimum de 1
+
+                if (count < target) {
+
+                    // On arrondit pour éviter les chiffres à virgule
+
+                    const nextValue = Math.ceil(count + inc);
+
+                    // On affiche la valeur intermédiaire (limité à la cible)
+
+                    compteur.innerText = nextValue > target ? target : nextValue;
+                    
+                    setTimeout(updateCount, 20);
+                } else {
+
+                    // Fin de l'animation : Ajout du symbole spécifique
+                    if (target === 3000) {
+                        compteur.innerText = target + "+";
+                    } else if (target === 85) {
+                        compteur.innerText = "+" + target + "%";
+                    } else {
+                        compteur.innerText = target;
+                    }
+                }
+            };
+
+            updateCount();
+        });
+
+    }, { once: true }); // L'animation ne se joue qu'une seule fois
+}
+
 

@@ -84,3 +84,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
   });
+  
+
+  // JS pour le difilement des 6 images de contact
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const inputs = document.querySelectorAll('.slide-input');
+    let currentIndex = 0;
+    const intervalTime = 5000; // 5 secondes par image
+    let autoSlider;
+
+    function startSlider() {
+        autoSlider = setInterval(() => {
+            // On décoche l'actuel (optionnel car c'est un bouton radio)
+            inputs[currentIndex].checked = false;
+            
+            // On passe au suivant
+            currentIndex = (currentIndex + 1) % inputs.length;
+            
+            // On coche le nouveau
+            inputs[currentIndex].checked = true;
+        }, intervalTime);
+    }
+
+    // Si l'utilisateur clique manuellement sur un point
+    inputs.forEach((input, index) => {
+        input.addEventListener('click', () => {
+            currentIndex = index; // On synchronise l'index du script avec le clic
+            clearInterval(autoSlider); // On réinitialise le chrono
+            startSlider();
+        });
+    });
+
+    startSlider();
+});
+
+
