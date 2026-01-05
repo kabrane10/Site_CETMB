@@ -1,11 +1,11 @@
-.filieres {
+ .filieres {
     padding: 80px 20px;
     background: #f5f6f7;
   }
   
   .container-filieres {
     max-width: 1200px;
-    margin: auto;
+    margin: 10px;
   }
   
   .section-title {
@@ -88,7 +88,7 @@
   .btn {
     display: inline-block;
     padding: 10px 18px;
-    background: #1f5d3a;
+    background: #02aa02;
     color: #ffffff;
     
     font-weight: 600;
