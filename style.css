@@ -361,6 +361,7 @@ h1{
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
     align-items: center;
+    border-radius: 10px;
     justify-content: center;
     letter-spacing: 1.3px;
     font-weight: 600;
@@ -478,7 +479,7 @@ h2, p{
   flex-wrap: wrap; 
   align-items: center; 
   gap: 10px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 25px 30px 30px;
   
   
@@ -518,7 +519,7 @@ h2, p{
 
 .images .imge {
   width: 50%; 
-  height: 470px; 
+  height: 435px; 
   margin-top: 40px;
   object-fit: cover; 
   border: 1px solid #fff;
