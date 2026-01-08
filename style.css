@@ -491,26 +491,33 @@ h2, p{
 }
 
 .texte h3 {
+  margin-top: 60px;
   text-align: center;
   font-size: 2rem;
   margin-bottom: 15px;
+  
 }
 
 .texte p {
   line-height: 1.8;
   color: #444;
-  text-align: justify;
+  text-align: left;
   border: 1px solid #fff;
   background-color: #f5f3f3;
   border-radius: 8px;
-  padding: 9px 15px;
+  padding: 25px 45px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   
+}
+
+.texte p:hover{
+  transform: translateY(-8);
 }
 
 
 .images {
-  margin-top: 22px;
+  margin-top: 35px;
   flex: 1 1 450px;
   display: flex;
   gap: 6px; 
@@ -520,7 +527,7 @@ h2, p{
 .images .imge {
   width: 50%; 
   height: 435px; 
-  margin-top: 40px;
+  margin-top: 35px;
   object-fit: cover; 
   border: 1px solid #fff;
   border-radius: 8px;
@@ -551,10 +558,12 @@ h2, p{
 @media (max-width: 500px) {
   .images {
       flex-direction: column; 
+      margin-top: -15px;
   }
   .images .imge {
       width: 100%;
       height: 200px;
+      margin-top: 30px;
   }
 }
 
@@ -597,13 +606,18 @@ h2, p{
   border: 1px solid #fff;
   box-shadow: 0 4px 15px rgba(17, 16, 16, 0.05);
   margin: 0 30px;
-  padding: 25px 35px;
+  padding: 25px 45px;
   border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   
 }
 .vision p, .ressource p, .resultat p, .history p{
-  text-align: justify;
+  text-align: left;
   line-height: 1.8;
+}
+
+.vision:hover, .ressource:hover, .resultat:hover, .history:hover{
+  transform: translateY(-8px);
 }
 
 /*Modification de la taille des icônes */
@@ -645,6 +659,10 @@ h2, p{
   border-radius: 5px;
 }
 
+.button1 img{
+  width: 30px;
+}
+
 .button1:hover{
   background: #eeba68;  
     
@@ -669,7 +687,7 @@ h2, p{
   background-color: #f5f3f3;
   border: 1px solid #fff;
   box-shadow: 0 4px 15px rgba(17, 16, 16, 0.05);
-  padding: 15px;
+  padding: 15px 45px;
   border-radius: 10px;
   
 }
@@ -688,7 +706,7 @@ h2, p{
   color: #263575;
 }
 .filiere p{
-  margin-top: 50px;
+  margin-top: 30px;
   line-height: 30px;
   text-align: left;
 }
@@ -1116,6 +1134,9 @@ responsive
   .carrousel {
     height: 70vh;
   }
+  .element-carrousel{
+    height: 350px;
+  }
 
   .debut {
     max-width: 95%;
@@ -1124,7 +1145,7 @@ responsive
   }
 
   .phrase_accroche h2 {
-    font-size: 15px;
+    font-size: 20px;
     text-align: left;
   }
 
@@ -1133,15 +1154,14 @@ responsive
     justify-content: left;
   }
   .devise p{
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .button {
-    margin-top: -10px;
     min-width: auto;
     border-radius: 5px;
-    margin-bottom: 40px;
-    font-size: 10px;
+    margin-top: 40px;
+    font-size: 20px;
   }
   .choix{
     display: block;
@@ -1190,6 +1210,9 @@ responsive
     margin-left: 0;
     font-size: 22px;
   }
+  .button1 img{
+    width: 25px;
+  }
 
 }
 
@@ -1205,6 +1228,9 @@ responsive
 
   .evolution {
     grid-template-columns: 1fr;
+  }
+  .texte p {
+    text-align: left;
   }
 
 }
